@@ -1,0 +1,7 @@
+C:\Users\rplop\OneDrive\Desktop\Eleven Fifty Academy\DailyNotes\Day0_MasterVSC\11) Pair-Programming Console Game\Pair Programing Console Game\bin\Debug\Pair Programing Console Game.exe.config
+C:\Users\rplop\OneDrive\Desktop\Eleven Fifty Academy\DailyNotes\Day0_MasterVSC\11) Pair-Programming Console Game\Pair Programing Console Game\bin\Debug\Pair Programing Console Game.exe
+C:\Users\rplop\OneDrive\Desktop\Eleven Fifty Academy\DailyNotes\Day0_MasterVSC\11) Pair-Programming Console Game\Pair Programing Console Game\bin\Debug\Pair Programing Console Game.pdb
+C:\Users\rplop\OneDrive\Desktop\Eleven Fifty Academy\DailyNotes\Day0_MasterVSC\11) Pair-Programming Console Game\Pair Programing Console Game\obj\Debug\Pair Programing Console Game.csproj.AssemblyReference.cache
+C:\Users\rplop\OneDrive\Desktop\Eleven Fifty Academy\DailyNotes\Day0_MasterVSC\11) Pair-Programming Console Game\Pair Programing Console Game\obj\Debug\Pair Programing Console Game.csproj.CoreCompileInputs.cache
+C:\Users\rplop\OneDrive\Desktop\Eleven Fifty Academy\DailyNotes\Day0_MasterVSC\11) Pair-Programming Console Game\Pair Programing Console Game\obj\Debug\Pair Programing Console Game.exe
+C:\Users\rplop\OneDrive\Desktop\Eleven Fifty Academy\DailyNotes\Day0_MasterVSC\11) Pair-Programming Console Game\Pair Programing Console Game\obj\Debug\Pair Programing Console Game.pdb
