@@ -1,0 +1,6 @@
+C:\Users\catie\Source\Repos\Pair-Programming-Console-Game\Repository\obj\Debug\Repository.csproj.AssemblyReference.cache
+C:\Users\catie\Source\Repos\Pair-Programming-Console-Game\Repository\obj\Debug\Repository.csproj.CoreCompileInputs.cache
+C:\Users\catie\Source\Repos\Pair-Programming-Console-Game\Repository\bin\Debug\Repository.dll
+C:\Users\catie\Source\Repos\Pair-Programming-Console-Game\Repository\bin\Debug\Repository.pdb
+C:\Users\catie\Source\Repos\Pair-Programming-Console-Game\Repository\obj\Debug\Repository.dll
+C:\Users\catie\Source\Repos\Pair-Programming-Console-Game\Repository\obj\Debug\Repository.pdb
