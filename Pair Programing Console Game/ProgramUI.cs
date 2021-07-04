@@ -9,19 +9,20 @@ namespace Pair_Programing_Console_Game
 {
     class ProgramUI
     {
-        BasicSelections _repo = new BasicSelections();
+        BasicSelections _basicRepo = new BasicSelections();
+        WrongSelections _wrongRepo = new WrongSelections();
+        StoryElements _storyRepo = new StoryElements();
         private bool _isRunning = true;
-        public void Start()
+        bool hasMap = false;
 
+        public void Start()
         {
             Console.WriteLine("The Pirate Game! ARGGGGGGGGG!");
             Console.ReadKey();
-            Console.Clear();
-            Console.WriteLine("Mysteries of the Seven Seas");
             Menu();
         }
 
-        public void Menu()
+        private void Menu()
         {
             while (_isRunning)
             {
@@ -34,7 +35,7 @@ namespace Pair_Programing_Console_Game
         private string GetMenuSelection()
         {
             Console.Clear();
-            Console.WriteLine("Welcome to the Streaming Content Management System.\n" +
+            Console.WriteLine("What'll ye do, captain?\n" +
                             "Select Menu Item:\n" +
                             "1. Start A New Game\n" +
                             "2. Continue\n" +
@@ -70,10 +71,11 @@ namespace Pair_Programing_Console_Game
                     break;
                 case "5":
                     //Console close.
-                    _isRunning = false;
-                    return;
+                    QuitGame();
+                    break;
                 default:
-                    Console.WriteLine("You couldn't read the map ya scallywag! Return to your treasure and start over!");
+                    Console.WriteLine("You couldn't read the map ya scallywag! Return to the selection menu and pick again!");
+                    Console.ReadKey();
                     GetMenuSelection();
                     return;
             }
@@ -82,52 +84,85 @@ namespace Pair_Programing_Console_Game
 
         private void DisplayStartPoint()
         {
-            Console.WriteLine("You wake as the captain of the Ship Ruby of the Sea, after a long night at sea. Your crew has been busy working through the night, as the sea rocked the Ruby back and forth.");
+            Console.WriteLine("You wake as the captain of the Ship Ruby of the Sea, after a long night on the waves.\n" +
+                "Your crew has been busy working through the night, as the ocean rocked the Ruby back and forth.");
             Console.ReadKey();
-            Console.WriteLine("Immediately you feel that something is wrong. You can smell it in the salty air. In the movements of the Ruby. In the squawking of your parrot, Charles.");
+            Console.WriteLine("\nImmediately you feel that something is wrong. You can smell it in the salty air. In the movements of the Ruby.\n" +
+                "In the squawking of your parrot, Charles.");
             Console.ReadKey();
-            Console.WriteLine("Stumbling out of bed, you graps for the nearest beverage, and call for your first mate; Sir Hooks Alot.");
+            Console.WriteLine("\nStumbling out of bed, you graps for the nearest beverage, and call for your first mate; Sir Hooks Alot.");
             Console.ReadKey();
-            Console.WriteLine("Sir Hooks Alot, in his usual persnickety tone responds loudly 'Captain you rang?'");
+            Console.WriteLine("\nSir Hooks Alot, in his usual persnickety tone responds loudly 'Captain you rang?'");
             Console.ReadKey();
-            Console.WriteLine("'Aye, where are we?' You respond in a tone representing your vast expirience at sea.");
+            Console.WriteLine("\n'Aye, where are we?' You respond in a tone representing your vast expirience at sea.");
             Console.ReadKey();
-            Console.WriteLine("Cap whatever do you mean?");
+            Console.WriteLine("\n'Cap, whatever do you mean?' Sir Hooks Alot barks back.");
             Console.ReadKey();
-            Console.WriteLine("Something is wrong. The sea and ship, they don't seem right!");
+            Console.WriteLine("\nYou say, 'Something is wrong. The sea and ship, they don't seem right!'");
             Console.ReadKey();
-            Console.WriteLine("*Squawk* 'Aint right, aint right.' Charles chirped");
+            Console.WriteLine("\n'*Squawk* Aint right, aint right.' Charles chirped.");
             Console.ReadKey();
-            Console.WriteLine("Bring me the map! Sir Hooks Alot, and meet me at the helm!");
+            Console.WriteLine("\nYou collect yourself and command, 'Bring me the map, Sir Hooks Alot, and meet me at the helm!'");
             Console.ReadKey();
-            Console.WriteLine("*Squawk* 'Bring the captain the map, before you walk the plank!'");
+            Console.WriteLine("\n'*Squawk* Bring the captain the map, before you walk the plank!' Charles retorts.");
             Console.ReadKey();
             Console.Clear();
-            _repo.GetAllDirections(); //Traveling from the bed to the helm is the "tutorial" for the game.
+            ChapterOne();
+        }
+
+        private void ChapterOne()
+        {
+            Console.WriteLine("Looking at the map and the stars, you realize that you are completely lost.\n" +
+                "The only thing to do now is to pick a direction and sail.");
+            _basicRepo.GetAllDirections();
+            string input = Console.ReadLine();
+
+            switch (input)
+            {
+                case "1": //n
+                    _basicRepo.TravelNorth();
+                    
+                    break;
+                case "2": //s
+                    _basicRepo.TravelSouth();
+                    break;
+                case "3": //e
+                    _basicRepo.TravelEast();
+                    break;
+                case "4": //w
+                    _basicRepo.TravelWest();
+                    break;
+                case "5":
+                    _basicRepo.OtherOptions();
+                    break;
+                default:
+                    _basicRepo.InvalidDirection();
+                    return;
+            }
         }
 
 
         private void SelectADirection()
         {
-            _repo.GetAllDirections();
+            _basicRepo.GetAllDirections();
             string userInput = Console.ReadLine();
 
             switch (userInput)
             {
                 case "1":
-                    _repo.TravelNorth();
+                    _basicRepo.TravelNorth();
                     break;
                 case "2":
-                    _repo.TravelSouth();
+                    _basicRepo.TravelSouth();
                     break;
                 case "3":
-                    _repo.TravelEast();
+                    _basicRepo.TravelEast();
                     break;
                 case "4":
-                    _repo.TravelWest();
+                    _basicRepo.TravelWest();
                     break;
                 default:
-                    _repo.InvalidDirection();
+                    _basicRepo.InvalidDirection();
                     Console.ReadKey();
                     SelectADirection();
                     break;
@@ -139,25 +174,24 @@ namespace Pair_Programing_Console_Game
         private void DisplaySavePoint()
         {
             Console.WriteLine("Select the area from which you'd like to return:\n" +
-                "A. The beach\n" +
-                "B. The ruins\n" +
-                "C. The temple");
-            string userInput = Console.ReadLine().ToLower();
+                "1. The beach\n" +
+                "2. The ruins\n" +
+                "3. The temple");
+            string userInput = Console.ReadLine();
 
-            switch (userInput)
+            switch(userInput)
             {
-                case "A":
-                    return //save point island repo;
+                case "1":
+                    //return //save point island repo;
                 break;
-                case "B":
-                    return //save point at ruins;
+                case "2":
+                    //return //save point at ruins;
                 break;
-                case "C":
-                    return //save point Sir Hooks Alot Betryal / Fight;
+                case "3":
+                    //return //save point Sir Hooks Alot Betryal / Fight;
                 break;
                 default:
-                    Console.WriteLine("*Squawk* 'Pick again'");
-                    Console.ReadKey();
+                    _basicRepo.InvalidSelection();
                     DisplaySavePoint();
                     break;
             }
@@ -186,6 +220,36 @@ namespace Pair_Programing_Console_Game
         private void DisplayCredit()
         {
             Console.WriteLine("By Catie and Rob!");
+            Console.ReadKey();
+        }
+
+        private void GetOtherOptions(string userInput)
+        {
+            _basicRepo.OtherOptions();
+
+            switch (userInput)
+            {
+                case "1":
+                    { if (hasMap = false)
+                        {
+                            _basicRepo.Inventory();
+                        }
+                        else _basicRepo.InventoryWithMap();
+                    }
+                    break;
+                case "2": GetMenuSelection();
+                    break;
+                default:
+                    _basicRepo.InvalidSelection();
+                    break;
+            }
+        }
+
+        private void QuitGame()
+        {
+            Console.WriteLine("Arrrrgh, see you next time, matey!");
+            Console.ReadKey();
+            _isRunning = false;
         }
     }
 }

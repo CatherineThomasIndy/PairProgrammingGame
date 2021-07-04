@@ -5,3 +5,13 @@ C:\Users\rplop\OneDrive\Desktop\Eleven Fifty Academy\DailyNotes\Day0_MasterVSC\1
 C:\Users\rplop\OneDrive\Desktop\Eleven Fifty Academy\DailyNotes\Day0_MasterVSC\11) Pair-Programming Console Game\Pair Programing Console Game\obj\Debug\Pair Programing Console Game.csproj.CoreCompileInputs.cache
 C:\Users\rplop\OneDrive\Desktop\Eleven Fifty Academy\DailyNotes\Day0_MasterVSC\11) Pair-Programming Console Game\Pair Programing Console Game\obj\Debug\Pair Programing Console Game.exe
 C:\Users\rplop\OneDrive\Desktop\Eleven Fifty Academy\DailyNotes\Day0_MasterVSC\11) Pair-Programming Console Game\Pair Programing Console Game\obj\Debug\Pair Programing Console Game.pdb
+C:\Users\catie\Source\Repos\Pair-Programming-Console-Game\Pair Programing Console Game\obj\Debug\Pair Programing Console Game.csproj.AssemblyReference.cache
+C:\Users\catie\Source\Repos\Pair-Programming-Console-Game\Pair Programing Console Game\obj\Debug\Pair Programing Console Game.csproj.CoreCompileInputs.cache
+C:\Users\catie\Source\Repos\Pair-Programming-Console-Game\Pair Programing Console Game\obj\Debug\Pair Programing Console Game.exe
+C:\Users\catie\Source\Repos\Pair-Programming-Console-Game\Pair Programing Console Game\obj\Debug\Pair Programing Console Game.pdb
+C:\Users\catie\Source\Repos\Pair-Programming-Console-Game\Pair Programing Console Game\bin\Debug\Pair Programing Console Game.exe.config
+C:\Users\catie\Source\Repos\Pair-Programming-Console-Game\Pair Programing Console Game\bin\Debug\Pair Programing Console Game.exe
+C:\Users\catie\Source\Repos\Pair-Programming-Console-Game\Pair Programing Console Game\bin\Debug\Pair Programing Console Game.pdb
+C:\Users\catie\Source\Repos\Pair-Programming-Console-Game\Pair Programing Console Game\bin\Debug\Repository.dll
+C:\Users\catie\Source\Repos\Pair-Programming-Console-Game\Pair Programing Console Game\bin\Debug\Repository.pdb
+C:\Users\catie\Source\Repos\Pair-Programming-Console-Game\Pair Programing Console Game\obj\Debug\Pair Programing Console Game.csproj.CopyComplete
